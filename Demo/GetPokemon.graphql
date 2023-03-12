@@ -1,0 +1,16 @@
+query GetPokemon($pokemon: PokemonEnum!) {
+  getPokemon(pokemon: $pokemon) {
+    key
+    baseStats {
+      attack
+      defense
+      hp
+    }
+    bulbapediaPage
+    smogonPage
+    num
+    sprite
+    shinySprite
+    serebiiPage
+  }
+}

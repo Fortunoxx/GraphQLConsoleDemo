@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "2c9e4a11-b4df-43be-b0dc-123be547f22c",
+		"name": "Pokemon GraphQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query GetPokemon($pokemon: PokemonEnum!, $offsetFlavorTexts: Int) {\r\n  getPokemon(pokemon: $pokemon, offsetFlavorTexts: $offsetFlavorTexts, reverseFlavorTexts: true) {\r\n    key\r\n    backSprite\r\n    baseStatsTotal\r\n    bulbapediaPage\r\n    color\r\n    eggGroups\r\n    evolutionLevel\r\n    height\r\n    isEggObtainable\r\n    levellingRate\r\n    maximumHatchTime\r\n    minimumHatchTime\r\n    num\r\n    otherFormes\r\n    serebiiPage\r\n    shinyBackSprite\r\n    shinySprite\r\n    smogonPage\r\n    smogonTier\r\n    species\r\n    sprite\r\n    weight\r\n  }\r\n}",
+						"variables": "{\r\n  \"pokemon\": \"tyranitar\"\r\n}\r\n"
+					}
+				},
+				"url": {
+					"raw": "https://graphqlpokemon.favware.tech/v7",
+					"protocol": "https",
+					"host": [
+						"graphqlpokemon",
+						"favware",
+						"tech"
+					],
+					"path": [
+						"v7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
